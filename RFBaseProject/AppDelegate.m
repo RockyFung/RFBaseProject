@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "BaseTabBarController.h"
+#import "GuidePagesVC.h"
 
 @interface AppDelegate ()
 
@@ -16,10 +18,29 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = [self pickViewController];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
+// 选择主视图
+- (UIViewController*)pickViewController{
+    // 获取老的版本号
+        NSString *oldAppVersion = [kUserDefaults stringForKey:KOldAppVersionKey];
+    // 如果版本号不一样显示引导页
+    BaseTabBarController *root = [[BaseTabBarController alloc]init];
+        if (![oldAppVersion isEqualToString:AppVersion]) {
+            GuidePagesVC *guide = [[GuidePagesVC alloc]init];
+            guide.imageDatas = @[@"guidePage1", @"guidePage1", @"guidePage1"];
+            guide.rootViewController = root;
+            [kUserDefaults setObject:AppVersion forKey:KOldAppVersionKey];
+            return guide;
+        }else {
+            return root;
+        }
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

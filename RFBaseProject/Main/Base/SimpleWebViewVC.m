@@ -8,7 +8,7 @@
 
 #import "SimpleWebViewVC.h"
 #import <WebKit/WebKit.h>
-//#import <ShareSDK/ShareSDK.h>
+#import <ShareSDK/ShareSDK.h>
 #import "FJActionSheetView.h"
 
 @interface SimpleWebViewVC ()<WKNavigationDelegate>
@@ -134,7 +134,7 @@
     decisionHandler(WKNavigationActionPolicyAllow); // 必须实现 不然会崩溃
 }
 
-/*
+
 - (void)shareAction{
     [UIView animateWithDuration:0.3 animations:^{
         self.shareBar.y = kScreenHeight-self.shareBar.height-kSafeBottomMargin-kStatusBarAndNavigationBarHeight;
@@ -199,5 +199,5 @@
         }
     }];
 }
- */
+ 
 @end

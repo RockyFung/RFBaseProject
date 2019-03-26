@@ -7,8 +7,8 @@
 //
 
 #import "FirstViewController.h"
-
-@interface FirstViewController ()
+#import "RFSimpleCodeTextView.h"
+@interface FirstViewController ()<RFSimpleCodeTextViewDelegate>
 
 @end
 
@@ -16,7 +16,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    
+    RFSimpleCodeTextView *codeView = [[RFSimpleCodeTextView alloc] initWithCount:4 margin:Gap_20];
+    codeView.frame = CGRectMake((kScreenWidth-FitValue(220))/2, FitValue(100), FitValue(220), FitValue(40));
+    codeView.delegate = self;
+    [self.view addSubview:codeView];
 }
 
 #pragma mark - login
@@ -28,4 +33,8 @@
     }];
 }
 
+#pragma mark - RFSimpleCodeTextViewDelegate
+- (void)inputCodeFinish:(NSString *)code{
+    NSLog(@"自动登陆");
+}
 @end

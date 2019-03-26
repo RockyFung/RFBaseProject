@@ -23,7 +23,7 @@
 		5C59883A2241D2CA0091696F /* share-weTime.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C5988382241D2CA0091696F /* share-weTime.png */; };
 		5C59883B2241D2CA0091696F /* share-weChat.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C5988392241D2CA0091696F /* share-weChat.png */; };
 		5C59883F2241D3630091696F /* RFDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C59883E2241D3630091696F /* RFDatePickerView.m */; };
-		5C59898E224A2B6A0091696F /* RFSimpleCodeTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C59898C224A2B6A0091696F /* RFSimpleCodeTextView.m */; };
+		5C598992224A2D8D0091696F /* RFSimpleCodeTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C598990224A2D8D0091696F /* RFSimpleCodeTextView.m */; };
 		5C9B24A62240BCA30077C29B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C9B24A52240BCA30077C29B /* AppDelegate.m */; };
 		5C9B24AC2240BCA30077C29B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C9B24AA2240BCA30077C29B /* Main.storyboard */; };
 		5C9B24AE2240BCA60077C29B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C9B24AD2240BCA60077C29B /* Assets.xcassets */; };
@@ -155,8 +155,8 @@
 		5C5988392241D2CA0091696F /* share-weChat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share-weChat.png"; sourceTree = "<group>"; };
 		5C59883D2241D3630091696F /* RFDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFDatePickerView.h; sourceTree = "<group>"; };
 		5C59883E2241D3630091696F /* RFDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFDatePickerView.m; sourceTree = "<group>"; };
-		5C59898C224A2B6A0091696F /* RFSimpleCodeTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFSimpleCodeTextView.m; sourceTree = "<group>"; };
-		5C59898D224A2B6A0091696F /* RFSimpleCodeTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFSimpleCodeTextView.h; sourceTree = "<group>"; };
+		5C598990224A2D8D0091696F /* RFSimpleCodeTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFSimpleCodeTextView.m; sourceTree = "<group>"; };
+		5C598991224A2D8D0091696F /* RFSimpleCodeTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFSimpleCodeTextView.h; sourceTree = "<group>"; };
 		5C9B24A12240BCA30077C29B /* RFBaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RFBaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C9B24A42240BCA30077C29B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5C9B24A52240BCA30077C29B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -486,14 +486,13 @@
 			path = RFDatePickerView;
 			sourceTree = "<group>";
 		};
-		5C59898B224A2B6A0091696F /* RFCodeTextView */ = {
+		5C59898F224A2D8D0091696F /* RFCodeTextView */ = {
 			isa = PBXGroup;
 			children = (
-				5C59898C224A2B6A0091696F /* RFSimpleCodeTextView.m */,
-				5C59898D224A2B6A0091696F /* RFSimpleCodeTextView.h */,
+				5C598990224A2D8D0091696F /* RFSimpleCodeTextView.m */,
+				5C598991224A2D8D0091696F /* RFSimpleCodeTextView.h */,
 			);
-			name = RFCodeTextView;
-			path = "../../../../../Documents/rv-app/rv-app/Libs/RFCodeTextView";
+			path = RFCodeTextView;
 			sourceTree = "<group>";
 		};
 		5C9B24982240BCA30077C29B = {
@@ -573,7 +572,7 @@
 		5C9B24D72240C0220077C29B /* Libs */ = {
 			isa = PBXGroup;
 			children = (
-				5C59898B224A2B6A0091696F /* RFCodeTextView */,
+				5C59898F224A2D8D0091696F /* RFCodeTextView */,
 				5C59883C2241D3630091696F /* RFDatePickerView */,
 				5C5988122241D2610091696F /* share */,
 				5CE892232240EEA40077451F /* SDCycleScrollView */,
@@ -1210,7 +1209,7 @@
 				5CE891D62240EB3B0077451F /* PPNetworkCache.m in Sources */,
 				5C9B25442240C8DF0077C29B /* XHLaunchAdController.m in Sources */,
 				5CE891862240DFA70077451F /* UIColor+HMObjcSugar.m in Sources */,
-				5C59898E224A2B6A0091696F /* RFSimpleCodeTextView.m in Sources */,
+				5C598992224A2D8D0091696F /* RFSimpleCodeTextView.m in Sources */,
 				5CE892372240EEA40077451F /* TAPageControl.m in Sources */,
 				5C9B25B22240CF340077C29B /* NSString+Money.m in Sources */,
 				5C9B25AF2240CF340077C29B /* UIView+RFAdd.m in Sources */,
